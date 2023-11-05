@@ -13,7 +13,7 @@ class BackHandlerButton {
   Future<bool> onWillPop() async {
     final now = DateTime.now();
     final bool interval = lastPressed == null ||
-        now.difference(lastPressed!) > const Duration(seconds: 3);
+        now.difference(lastPressed!) > const Duration(seconds: 2);
 
     if (interval) {
       lastPressed = now;
