@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news2/constants/sizes.dart';
 import 'package:news2/features/widgets/back_action_button.dart';
 
 class MainScreen extends StatefulWidget {
@@ -28,10 +29,21 @@ class _MainScreenState extends State<MainScreen> {
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
+          title: const Text(
+            "API NEW JEANS",
+            style: TextStyle(
+              color: Colors.black,
+            ),
+          ),
           elevation: 0,
           backgroundColor: Colors.white,
         ),
-        body: Container(),
+        body: Padding(
+          padding: const EdgeInsets.all(
+            Sizes.size24,
+          ),
+          child: Container(),
+        ),
       ),
     );
   }
