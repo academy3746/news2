@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news2/features/screens/detail_screen/detail_screen.dart';
 import 'package:news2/features/screens/main_screen/main_screen.dart';
 import 'package:news2/features/screens/splash_screen/splash_screen.dart';
 
@@ -23,6 +24,18 @@ class NewsApp extends StatelessWidget {
       routes: {
         SplashScreen.routeName: (context) => const SplashScreen(),
         MainScreen.routeName: (context) => const MainScreen(),
+      },
+      onGenerateRoute: (RouteSettings settings) {
+        if (settings.name == DetailScreen.routeName) {
+          dynamic newsItems = settings.arguments as dynamic;
+          return MaterialPageRoute(
+            builder: (BuildContext context) {
+              return DetailScreen(newsItem: newsItems);
+            },
+          );
+        }
+
+        return null;
       },
     );
   }
