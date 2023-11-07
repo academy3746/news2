@@ -138,6 +138,8 @@ class _MainScreenState extends State<MainScreen> {
                         child: Container(
                           margin: const EdgeInsets.all(Sizes.size10),
                           child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Text(
                                 newsItem["title"],
