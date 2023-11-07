@@ -71,10 +71,7 @@ class DetailScreen extends StatelessWidget {
 
               /// publishedAt
               Container(
-                margin: const EdgeInsets.only(
-                  bottom: Sizes.size20,
-                  right: Sizes.size12,
-                ),
+                margin: const EdgeInsets.only(bottom: Sizes.size20),
                 child: Align(
                   alignment: Alignment.centerRight,
                   child: Text(
